@@ -28,4 +28,15 @@ class DemoTest {
 
         assertThat(result).isEqualTo(excepted);
     }
+
+    @Test
+    void given_0_0_n_r_when_execute_command_return_0_0_E(){
+        List<String> commands = Arrays.asList("R");
+        Application app = new Application();
+
+        String result = app.reportLocation(new Rover(0,0,"N"),commands);
+        String excepted ="(0,0 R)";
+
+        assertThat(result).isEqualTo(excepted);
+    }
 }

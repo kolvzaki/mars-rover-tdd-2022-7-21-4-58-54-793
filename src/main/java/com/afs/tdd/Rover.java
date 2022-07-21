@@ -38,7 +38,7 @@ public class Rover {
                 this.move();
             }
             if (Objects.equals(s.toUpperCase(), Commons.LEFT)) {
-                //this.turnLeft();
+                this.turnLeft();
             }
             if (Objects.equals(s.toUpperCase(), Commons.LEFT)) {
                 //this.turnRight();
