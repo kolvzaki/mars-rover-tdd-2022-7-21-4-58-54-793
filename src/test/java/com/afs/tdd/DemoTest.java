@@ -35,7 +35,7 @@ class DemoTest {
         Application app = new Application();
 
         String result = app.reportLocation(new Rover(0,0,"N"),commands);
-        String excepted ="(0,0 R)";
+        String excepted ="(0,0 E)";
 
         assertThat(result).isEqualTo(excepted);
     }

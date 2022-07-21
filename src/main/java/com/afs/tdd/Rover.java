@@ -40,8 +40,8 @@ public class Rover {
             if (Objects.equals(s.toUpperCase(), Commons.LEFT)) {
                 this.turnLeft();
             }
-            if (Objects.equals(s.toUpperCase(), Commons.LEFT)) {
-                //this.turnRight();
+            if (Objects.equals(s.toUpperCase(), Commons.RIGHT)) {
+                this.turnRight();
             }
         });
     }
