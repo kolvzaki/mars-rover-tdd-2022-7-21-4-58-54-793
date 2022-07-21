@@ -108,7 +108,13 @@ class DemoTest {
 
     @Test
     void given_0_0_w_m_when_execute_command_return_negative_1_0_W(){
+        List<String> commands = Arrays.asList("M");
+        Application app = new Application();
 
+        String result = app.reportLocation(new Rover(0,0,"W"),commands);
+        String excepted ="(-1,0 W)";
+
+        assertThat(result).isEqualTo(excepted);
     }
 
     @Test
