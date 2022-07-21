@@ -160,5 +160,14 @@ class DemoTest {
 
         assertThat(result).isEqualTo(excepted);
     }
+    @Test
+    void given_null_when_execute_command(){
+        Application app = new Application();
+
+        String result = app.reportLocation(new Rover(0,0,"W"),null);
+        String excepted ="(0,0 W)";
+
+        assertThat(result).isEqualTo(excepted);
+    }
 
 }
