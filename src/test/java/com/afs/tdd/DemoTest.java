@@ -97,7 +97,13 @@ class DemoTest {
 
     @Test
     void given_0_0_e_r_when_execute_command_return_0_0_S(){
+        List<String> commands = Arrays.asList("R");
+        Application app = new Application();
 
+        String result = app.reportLocation(new Rover(0,0,"E"),commands);
+        String excepted ="(0,0 S)";
+
+        assertThat(result).isEqualTo(excepted);
     }
 
     @Test
