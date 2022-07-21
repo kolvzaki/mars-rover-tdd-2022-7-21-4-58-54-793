@@ -17,7 +17,7 @@ public class Rover {
     public Rover(int x, int y, String direction) {
         this.x = x;
         this.y = y;
-        this.direction = direction;
+        this.direction = direction.toUpperCase();
     }
 
     public int getX() {
