@@ -29,7 +29,7 @@ public class Rover {
     }
 
     public String getDirection() {
-        return direction;
+        return this.direction;
     }
 
     public void runCommands(List<String> commands) {
@@ -38,10 +38,10 @@ public class Rover {
                 this.move();
             }
             if (Objects.equals(s.toUpperCase(), Commons.LEFT)) {
-                this.turnLeft();
+                //this.turnLeft();
             }
             if (Objects.equals(s.toUpperCase(), Commons.LEFT)) {
-                this.turnRight();
+                //this.turnRight();
             }
         });
     }
@@ -51,7 +51,7 @@ public class Rover {
     }
 
     private void move() {
-        switch (this.direction) {
+        switch (this.getDirection()) {
             case Commons.EAST:
                 this.x += 1;
                 break;
@@ -68,11 +68,38 @@ public class Rover {
     }
 
     private void turnLeft() {
+        switch (this.getDirection()){
+            case Commons.EAST:
+                this.setDirection(Commons.NORTH);
+                break;
+            case Commons.WEST:
+                this.setDirection(Commons.SOUTH);
+                break;
+            case Commons.SOUTH:
+                this.setDirection(Commons.EAST);
+                break;
+            case Commons.NORTH:
+                this.setDirection(Commons.WEST);
+                break;
+        }
 
     }
 
     private void turnRight() {
-
+        switch (this.getDirection()){
+            case Commons.EAST:
+                this.setDirection(Commons.SOUTH);
+                break;
+            case Commons.WEST:
+                this.setDirection(Commons.NORTH);
+                break;
+            case Commons.SOUTH:
+                this.setDirection(Commons.WEST);
+                break;
+            case Commons.NORTH:
+                this.setDirection(Commons.EAST);
+                break;
+        }
     }
 
     public String getLocation() {

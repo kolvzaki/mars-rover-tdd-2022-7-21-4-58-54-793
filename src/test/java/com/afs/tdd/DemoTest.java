@@ -17,4 +17,15 @@ class DemoTest {
 
         assertThat(result).isEqualTo(excepted);
     }
+
+    @Test
+    void given_0_0_n_l_when_execute_command_return_0_0_W(){
+        List<String> commands = Arrays.asList("L");
+        Application app = new Application();
+
+        String result = app.reportLocation(new Rover(0,0,"N"),commands);
+        String excepted ="(0,0 W)";
+
+        assertThat(result).isEqualTo(excepted);
+    }
 }
