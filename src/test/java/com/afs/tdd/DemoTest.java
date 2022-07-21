@@ -39,4 +39,15 @@ class DemoTest {
 
         assertThat(result).isEqualTo(excepted);
     }
+
+    @Test
+    void given_0_0_s_w_when_execute_command_return_0_negative_1_s(){
+        List<String> commands = Arrays.asList("M");
+        Application app = new Application();
+
+        String result = app.reportLocation(new Rover(0,0,"S"),commands);
+        String excepted ="(0,-1 S)";
+
+        assertThat(result).isEqualTo(excepted);
+    }
 }
