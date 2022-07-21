@@ -119,7 +119,13 @@ class DemoTest {
 
     @Test
     void given_0_0_w_l_when_execute_command_return_0_0_S(){
+        List<String> commands = Arrays.asList("L");
+        Application app = new Application();
 
+        String result = app.reportLocation(new Rover(0,0,"W"),commands);
+        String excepted ="(0,0 S)";
+
+        assertThat(result).isEqualTo(excepted);
     }
 
     @Test
