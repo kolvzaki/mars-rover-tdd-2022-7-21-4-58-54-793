@@ -1,7 +1,9 @@
 package com.afs.tdd;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 public class Rover {
     private int x;
@@ -33,7 +35,7 @@ public class Rover {
     }
 
     public void runCommands(List<String> commands) {
-        commands.forEach(s -> {
+        Optional.ofNullable(commands).orElse(new ArrayList<>()).forEach(s -> {
             if (Objects.equals(s.toUpperCase(), Commons.MOVE)) {
                 this.move();
             }
