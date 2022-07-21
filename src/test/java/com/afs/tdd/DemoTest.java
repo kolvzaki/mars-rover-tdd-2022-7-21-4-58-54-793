@@ -61,4 +61,46 @@ class DemoTest {
 
         assertThat(result).isEqualTo(excepted);
     }
+
+    @Test
+    void  given_0_0_s_r_when_execute_command_return_0_0_W(){
+        List<String> commands = Arrays.asList("R");
+        Application app = new Application();
+
+        String result = app.reportLocation(new Rover(0,0,"S"),commands);
+        String excepted ="(0,0 W)";
+
+        assertThat(result).isEqualTo(excepted);
+    }
+
+    @Test
+    void given_0_0_e_m_when_execute_command_return_1_0_E(){
+
+    }
+
+    @Test
+    void given_0_0_e_l_when_execute_command_return_0_0_N(){
+
+    }
+
+    @Test
+    void given_0_0_e_r_when_execute_command_return_0_0_S(){
+
+    }
+
+    @Test
+    void given_0_0_w_m_when_execute_command_return_negative_1_0_W(){
+
+    }
+
+    @Test
+    void given_0_0_w_l_when_execute_command_return_0_0_S(){
+
+    }
+
+    @Test
+    void given_0_0_w_r_when_execute_command_return_0_0_N(){
+
+    }
+
 }
