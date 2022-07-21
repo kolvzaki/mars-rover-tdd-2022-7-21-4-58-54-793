@@ -152,7 +152,13 @@ class DemoTest {
 
     @Test
     void given_empty_commands_when_execute_command(){
+        List<String> commands = Arrays.asList("","","");
+        Application app = new Application();
 
+        String result = app.reportLocation(new Rover(0,0,"W"),commands);
+        String excepted ="(0,0 W)";
+
+        assertThat(result).isEqualTo(excepted);
     }
 
 }
