@@ -12,3 +12,6 @@ The instructions received by the rover fall into three categories:
      The rover can turn left 90 degrees (L) or right 90 degrees (R).
 
 Due to the long distance between the Earth and Mars, the instructions must be sent in batches. After the rover executes the complete batch of instructions, it will report its location coordinates and heading.
+
+## Context Map
+![](Mars Rover.drawio.png)
