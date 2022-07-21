@@ -139,4 +139,20 @@ class DemoTest {
         assertThat(result).isEqualTo(excepted);
     }
 
+    @Test
+    void given_batch_commands_when_execute_command(){
+        List<String> commands = Arrays.asList("M","R","M","M","R","M","L","M");
+        Application app = new Application();
+
+        String result = app.reportLocation(new Rover(0,0,"W"),commands);
+        String excepted ="(0,3 N)";
+
+        assertThat(result).isEqualTo(excepted);
+    }
+
+    @Test
+    void given_empty_commands_when_execute_command(){
+
+    }
+
 }
